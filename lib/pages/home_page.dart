@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:angelo/util/dialog_box.dart';
-import 'package:angelo/util/todo_tile.dart';
+import 'package:guipro_final/util/dialog_box.dart';
+import 'package:guipro_final/util/todo_tile.dart';
 
 void main() {
   runApp(const HomePage());
