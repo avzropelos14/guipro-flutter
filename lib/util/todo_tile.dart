@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 class ToDoTile extends StatelessWidget {
   final String taskName;
@@ -17,9 +18,14 @@ class ToDoTile extends StatelessWidget {
         endActionPane: ActionPane(
           motion: StretchMotion(),
           children: [
-            SlidableAction(onpressed: deleteFunction, icon: Icons.delete, backgroundColor: Colors.purple, borderRadius: BorderRadius.circular(15))
+            SlidableAction(
+              onPressed: (BuildContext context) => deleteFunction?.call(context), 
+              icon: Icons.delete, 
+              backgroundColor: Colors.purple, 
+              borderRadius: BorderRadius.circular(15)
+            ),
           ],
-        );
+        ),
         child: Container(
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
