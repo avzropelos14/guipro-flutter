@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:guipro_finals/util/dialog_box.dart';
-import 'package:guipro_finals/util/todo_tile.dart';
+import 'package:angelo/util/dialog_box.dart';
+import 'package:angelo/util/todo_tile.dart';
 
 void main() {
   runApp(const HomePage());
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
         body: ListView.builder(
           itemCount: toDoList.length,
           itemBuilder:(context, index) {
-            return ToDoTile(taskName: toDoList[index][0], taskCompleted: toDoList[index][1], onChanged: (value) =>  checkBoxChanged(value, index), deleteFunction: (context) => deleteTask,
+            return ToDoTile(taskName: toDoList[index][0], taskCompleted: toDoList[index][1], onChanged: (value) =>  checkBoxChanged(value, index), deleteFunction: (context) => deleteTask(index),
             );
           },
         ),
